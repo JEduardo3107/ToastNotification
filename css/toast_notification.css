@@ -1,0 +1,198 @@
+.notification-container{
+    width: 22.813rem;
+    position: fixed;
+    left: .45rem;
+    bottom: .60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    z-index: 4;
+}
+
+.notification-tab{
+    position: relative;
+    opacity: 0; /* must be 0 */
+    width: 100%;
+    min-height: 90px;
+    background: white;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 1fr .5rem;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.085);
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.085);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.085);
+    padding-top: .25rem;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    border-left: 1px solid rgba(0,0,0,0.07);
+    border-radius: .2rem;
+    overflow: hidden;
+}
+
+.notification-tab__content-container{
+    box-sizing: border-box;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 3.75rem 1fr;
+}
+
+.notification-tab__icon-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-tab__icon{
+    width: 2.188rem;
+    height: 2.188rem;
+    background: url('../img/toast-notification-sprite.svg') center/12.5rem 9.625rem no-repeat;
+    overflow: hidden;
+}
+
+.notification-tab__icon--alert{
+    background-position: -0.813rem -0.875rem;
+}
+
+.notification-tab__icon--information{
+    background-position: -3.75rem -0.813rem;
+}
+
+.notification-tab__icon--cross{
+    background-position: -6.625rem -0.813rem;
+}
+
+.notification-tab__icon--check{
+    background-position: -9.5rem -0.813rem;
+}
+
+.notification-tab__icon--cloud{
+    background-position: -0.813rem -3.75rem;
+}
+
+.notification-tab__icon--internet{
+    background-position: -3.688rem -3.688rem;
+}
+
+.notification-tab__icon--no-internet{
+    background-position: -6.563rem -3.75rem;
+}
+
+.notification-tab__icon--download{
+    background-position: -9.5rem -3.688rem;
+}
+
+.notification-tab__icon--message{
+    background-position: -0.813rem -6.625rem;
+}
+
+.notification-tab__icon--bell{
+    background-position: -3.688rem -6.625rem;
+}
+
+.notification-tab__icon--pin{
+    background-position: -6.625rem -6.625rem;
+}
+
+.notification-tab__icon--reload{
+    background-position: -9.5rem -6.625rem;
+}
+
+.notification-tab__text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notification-tab__title{
+    width: 100%;
+    font-size: .87rem;
+    font-weight: bold;
+    color: #444444;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.notification-tab__description{
+    box-sizing: border-box;
+    padding: .25rem 0 .1rem 0;
+    color: #444444;
+    font-size: .87rem;
+}
+
+.notification-tab__progressbar-container{
+    position: relative;
+}
+
+.notification-tab__progressbar{
+    display: block;
+    width: 100%;
+    height: .30rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* background: color;*/
+}
+
+.notification-tab__description a{
+    text-decoration: none;
+    outline: none;
+    color: #469DDA;
+    font-weight: bold;
+}
+
+.notification-tab__description span{
+    color: inherit;
+    font-weight: bold;
+}
+
+.notification-tab--delete-icon,
+.notification-tab--delete-text,
+.notification-tab--delete-tab,
+.notification-tab--initial-animation{
+    transition: all linear .25s;
+}
+
+.notification-tab__progressbar{
+    transition: all linear .100s;
+}
+
+.notification-tab--initial-animation{
+    opacity: 1;
+}
+
+.notification-tab--delete-tab{
+    transform: translateX(-100%);
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    min-height: 0;
+    border: 0;
+}
+
+.notification-tab--delete-text{
+    font-size: 1px;
+}
+
+.notification-tab--delete-icon{
+    height: 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 850px) {   
+    .notification-container{
+        width: calc(100% - 1.3rem);
+        position: fixed;
+        left: .65rem;
+        top: .60rem;
+        bottom: inherit;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}

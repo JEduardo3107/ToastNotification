@@ -1,0 +1,47 @@
+html, body,
+img, label, span,
+div, p, strong, section
+h1, h2, h3, h4, h5{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body{
+    height: 100%;  
+}
+
+.unselectable{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+.btn-test{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background: #ECECEC;
+    border: 2px solid #A2A2A2;
+    border-radius: .2rem;
+    outline: none;
+    text-decoration: none;
+    font-size: 18px;
+    color: #444444;
+    cursor: pointer;
+    transition: all linear .10s;
+}
+
+.btn-test:hover{
+    background: #D6D6D6;
+    color: #0e0e0e;
+}
