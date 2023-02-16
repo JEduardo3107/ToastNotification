@@ -32,11 +32,11 @@ BTN_TEST.addEventListener("click", function(){
     const config = {
         iconClass: randomValue(ICON_CLASS),
         title: "Notificación",
-        body: "<p>Mensaje normal, <span>bold</span></p>",
+        body: "<p>Contenido normal, <span>bold</span> o si lo prefieres, <a href='#'>enlaces</a>",
         color: randomValue(COLOR),
-        displayTime: 3000
+        displayTime: 5000
     };
-
+    
     newToastMessage(config);
 });
 

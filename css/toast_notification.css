@@ -12,7 +12,7 @@
 
 .notification-tab{
     position: relative;
-    opacity: 0; /* must be 0 */
+    opacity: 0;
     width: 100%;
     min-height: 90px;
     background: white;
@@ -30,6 +30,11 @@
     overflow: hidden;
 }
 
+.notification-tab:hover{
+    transition: all linear .50s;
+    background: #F1F1F1;
+}
+
 .notification-tab__content-container{
     box-sizing: border-box;
     padding: .5rem;
@@ -43,61 +48,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.notification-tab__icon{
-    width: 2.188rem;
-    height: 2.188rem;
-    background: url('../img/toast-notification-sprite.svg') center/12.5rem 9.625rem no-repeat;
-    overflow: hidden;
-}
-
-.notification-tab__icon--alert{
-    background-position: -0.813rem -0.875rem;
-}
-
-.notification-tab__icon--information{
-    background-position: -3.75rem -0.813rem;
-}
-
-.notification-tab__icon--cross{
-    background-position: -6.625rem -0.813rem;
-}
-
-.notification-tab__icon--check{
-    background-position: -9.5rem -0.813rem;
-}
-
-.notification-tab__icon--cloud{
-    background-position: -0.813rem -3.75rem;
-}
-
-.notification-tab__icon--internet{
-    background-position: -3.688rem -3.688rem;
-}
-
-.notification-tab__icon--no-internet{
-    background-position: -6.563rem -3.75rem;
-}
-
-.notification-tab__icon--download{
-    background-position: -9.5rem -3.688rem;
-}
-
-.notification-tab__icon--message{
-    background-position: -0.813rem -6.625rem;
-}
-
-.notification-tab__icon--bell{
-    background-position: -3.688rem -6.625rem;
-}
-
-.notification-tab__icon--pin{
-    background-position: -6.625rem -6.625rem;
-}
-
-.notification-tab__icon--reload{
-    background-position: -9.5rem -6.625rem;
 }
 
 .notification-tab__text-container{
@@ -182,6 +132,62 @@
 
 .notification-tab--delete-icon{
     height: 0;
+}
+
+/* Icon */
+.notification-tab__icon{
+    width: 2.188rem;
+    height: 2.188rem;
+    background: url('../img/toast-notification-sprite.svg') center/12.5rem 9.625rem no-repeat;
+    overflow: hidden;
+}
+
+.notification-tab__icon--alert{
+    background-position: -0.813rem -0.875rem;
+}
+
+.notification-tab__icon--information{
+    background-position: -3.75rem -0.813rem;
+}
+
+.notification-tab__icon--cross{
+    background-position: -6.625rem -0.813rem;
+}
+
+.notification-tab__icon--check{
+    background-position: -9.5rem -0.813rem;
+}
+
+.notification-tab__icon--cloud{
+    background-position: -0.813rem -3.75rem;
+}
+
+.notification-tab__icon--internet{
+    background-position: -3.688rem -3.688rem;
+}
+
+.notification-tab__icon--no-internet{
+    background-position: -6.563rem -3.75rem;
+}
+
+.notification-tab__icon--download{
+    background-position: -9.5rem -3.688rem;
+}
+
+.notification-tab__icon--message{
+    background-position: -0.813rem -6.625rem;
+}
+
+.notification-tab__icon--bell{
+    background-position: -3.688rem -6.625rem;
+}
+
+.notification-tab__icon--pin{
+    background-position: -6.625rem -6.625rem;
+}
+
+.notification-tab__icon--reload{
+    background-position: -9.5rem -6.625rem;
 }
 
 /* Responsive */

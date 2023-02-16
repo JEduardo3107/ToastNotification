@@ -2,16 +2,19 @@ const CONTAINER_QUOTE = document.getElementById('notification-container');
 
 class createToastMessage{
     constructor(config){
-        this.iconClass = config.iconClass;
-        this.title = config.title;
-        this.body = config.body;
-        this.color = config.color;
+
+        // Add validation here (Required)
+
+        this.iconClass = config.iconClass || "notification-tab__icon--information";
+        this.title = config.title || "Título";
+        this.body = config.body || "<p>Contenido</p>";
+        this.color = config.color || "#64B8D3";
         this.displayTime = config.displayTime || null;
 
         this.eventGroup_CreateToastNotification();
  
-        //change_ propiedad _when_ evento
-        // eventGroup_ grupo _For_ 
+        // change_ propiedad _when_ evento
+        // eventGroup_ grupo _For_
 
 		if(this.displayTime){
             this.time_original = this.displayTime;
@@ -151,18 +154,18 @@ class createToastMessage{
     }
 
     /* Change the timer status */
-    change_Timer_When_Mouseout(){
-        this.notification_tab.addEventListener('mouseout', () => {
-            this.set_Timer_For_ToastNotification();
-        });
-    }
-
     change_Timer_When_Mouseover(){
         this.notification_tab.addEventListener('mouseover', ()=>{
             this.time_remain = this.time_original;
             this.time_percentage = 100;
             this.notification_tab__progressbar.style.width = `${this.time_percentage}%`;
             clearInterval(this.displayTimeCounter);
+        });
+    }
+
+    change_Timer_When_Mouseout(){
+        this.notification_tab.addEventListener('mouseout', () => {
+            this.set_Timer_For_ToastNotification();
         });
     }
 
